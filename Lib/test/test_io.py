@@ -4878,6 +4878,7 @@ class SignalsTest(unittest.TestCase):
     def test_interrupted_write_retry_text(self):
         self.check_interrupted_write_retry("x", mode="w", encoding="latin1")
 
+    @unittest.skipUnless(hasattr(os, "pipe"), "requires os.pipe()")
     def test_read_non_blocking(self):
         import os
 
