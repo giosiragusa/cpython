@@ -4891,6 +4891,7 @@ class SignalsTest(unittest.TestCase):
     def test_interrupted_write_retry_text(self):
         self.check_interrupted_write_retry("x", mode="w", encoding="latin1")
 
+
 class CSignalsTest(SignalsTest):
     io = io
 
