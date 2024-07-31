@@ -1993,7 +1993,7 @@ _io_TextIOWrapper_read_impl(textio *self, Py_ssize_t n)
             goto fail;
 
         if (bytes == Py_None) {
-            return Py_None;
+            Py_RETURN_NONE;
         }
 
         _PyIO_State *state = self->state;

@@ -3927,6 +3927,7 @@ class TextIOWrapperTest(unittest.TestCase):
             os.set_blocking(r, False)
             with open(r, 'r') as textfile:
                 r = None
+                # Nothing has been written so a non-blocking read returns None.
                 self.assertIsNone(textfile.read())
         finally:
             if r is not None:
